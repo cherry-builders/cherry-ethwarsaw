@@ -1,4 +1,5 @@
-import { X, Heart, Filter } from "lucide-react";
+import { X, Heart, Filter, FilterIcon, SlidersHorizontal } from "lucide-react";
+import { Button } from "../ui/button";
 
 interface ActionButtonsProps {
   onReject: () => void;
@@ -34,14 +35,14 @@ export default function ActionAndFiltersButtons({
         </button>
       </div>
       <div className="absolute bottom-16 right-4">
-        <button
+        <Button
           onClick={onOpenFilters}
-          className="flex justify-end items-center bg-card rounded-xl my-2 py-1.5 px-2"
+          className="flex justify-end items-center  rounded-xl my-2 py-1.5 px-2 bg-secondary"
           aria-label="Open Filters"
         >
-          <Filter className="mr-2 h-5 w-5" />
-          Filters
-        </button>
+          <Filter className="mr-0 h-5 w-5" />
+          {/* Filters */}
+        </Button>
       </div>
     </div>
   );
